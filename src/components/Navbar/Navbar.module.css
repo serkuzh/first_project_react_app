@@ -6,8 +6,28 @@
 .item a {
   color: white;
   text-decoration: none;
-  
 }
 .item a.activeLink {
   color: goldenrod;
+}
+.friends {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+.circle {
+  background: #d98845;
+  clip-path: circle(30%);
+  height: 5em;
+  width: 5em;
+  /* display: grid; */
+  /* justify-content: center; */
+}
+.name{
+  /* display:grid ; */
+  /* justify-content: center; */
+  text-align: center;
+}
+.friend{
+  display: grid;
+  justify-content: center;
 }

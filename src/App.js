@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter, Route } from "react-router-dom";
+import { Route } from "react-router-dom";
 import "./App.css";
 import Dialogs from "./components/Dialogs/Dialogs";
 
@@ -12,27 +12,24 @@ import Sett from "./components/Settng/Sett";
 
 const App = (props) => {
   return (
-    <BrowserRouter>
-      <div className="app-wrapper">
-        <Header />
-        <Navbar sidebar={props.state.sidebar} />
-        <div className="app-wrapper-content">
-          <Route
-            exact
-            path="/dialogs"
-            render={() => <Dialogs messagesPage={props.state.messagesPage} />}
-
-          />
-          <Route
-            path="/profile"
-            render={() => <Profile posts={props.state.profilePage} />}
-          />
-          <Route path="/newspaper" component={News} />
-          <Route path="/listen" component={Music} />
-          <Route path="/sett" component={Sett} />
-        </div>
+    <div className="app-wrapper">
+      <Header />
+      <Navbar sidebar={props.state.sidebar} />
+      <div className="app-wrapper-content">
+        <Route
+          exact
+          path="/dialogs"
+          render={() => <Dialogs messagesPage={props.state.messagesPage} />}
+        />
+        <Route
+          path="/profile"
+          render={() => <Profile posts={props.state.profilePage} />}
+        />
+        <Route path="/newspaper" component={News} />
+        <Route path="/listen" component={Music} />
+        <Route path="/sett" component={Sett} />
       </div>
-    </BrowserRouter>
+    </div>
   );
 };
 

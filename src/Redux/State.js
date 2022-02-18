@@ -23,11 +23,11 @@ let state = {
     ],
   },
   sidebar: {
-    userName:[
-    { id: 1, name: "Катя" },
-    { id: 2, name: "Вика" },
-    { id: 3, name: "Люда" },
-  ]
+    users: [
+      { id: 1, name: "Катя" },
+      { id: 2, name: "Вика" },
+      { id: 3, name: "Люда" },
+    ],
   },
 };
 
