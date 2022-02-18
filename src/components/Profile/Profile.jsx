@@ -1,18 +1,14 @@
 import React from "react";
-import Posts from "./MyPosts/Posts";
-import p from "./Profile.module.css";
-const Profile = () => {
-  return (
-    <div className={p.content}>
-      <div>
-        <img
-          src="https://www.logodesign.net/images/illustration-logo.png"
-          alt=""
-        />
-      </div>
+import MyPosts from "./MyPosts/MyPosts";
+import ProfileInfo from "./ProfileInfo/ProfileInfo";
 
-      <div>ava + discription</div>
-      <Posts/>
+
+const Profile = (props) => {
+  
+  return (
+    <div>
+      <ProfileInfo />
+      <MyPosts posts={props.posts} />
     </div>
   );
 };
